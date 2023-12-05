@@ -59,7 +59,7 @@ function showNav() {
             document.getElementById("dropdown").style.backgroundColor = "#000";
         }, 950);
 
-        content.style.display = "block";
+        content.style.display = "flex";
         content.style.animationDuration = "1.05s";
         content.style.animationTimingFunction = "linear";
         content.style.animationDirection = "normal";
