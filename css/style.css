@@ -1,59 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 html {
-    height: 100%;
     overflow: hidden;
+
+    height: 100%;
 }
 
 body {
-    margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
+
     height: 100%;
+    margin: 0 auto;
 }
 
 #latest {
     position: absolute;
+
     width: 100%;
     height: 100%;
 }
 
 #latest h1  {
-    color: #000;
     text-align: center;
-}
 
-@keyframes show {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes hide {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes colormix {
-    from {
-        background-color: #0e0191;
-    }
-    to {
-        background-color: #000000;
-    }
-}
-@keyframes colormix-backwards {
-    from {
-        background-color: #000000;
-    }
-    to {
-        background-color: #0e0191;
-    }
+    color: #000;
 }

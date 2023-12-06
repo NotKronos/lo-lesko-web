@@ -1,23 +1,30 @@
 let isShown = false;
-
 function showNav() {
-    if (isShown) {
-        const content = document.getElementById("dropdown-content");
-        document.getElementById("dropdown-button").disabled = true;
-        content.style.animationDuration = "1s";
-        content.style.animationTimingFunction = "linear";
-        content.style.animationName = "hide";
+    const logo = document.getElementById("logo");
+    const title = document.getElementById("title");
+    const dropdown = document.getElementById("dropdown");
+    const dropdownContent = document.getElementById("dropdown-content");
+    const dropdownButton = document.getElementById("dropdown-button");
+    const bars = document.getElementsByClassName("bar");
 
-        document.getElementById("logo").style.animation = "colormix-backwards 1s ease-in-out 0s 1 normal";
-        document.getElementById("title").style.animation = "colormix-backwards 1s ease-in-out 0s 1 normal";
-        document.getElementById("dropdown").style.animation = "colormix-backwards 1s ease-in-out 0s 1 normal";
+    const colorMix = "colormix 1s ease-in-out 0s 1 normal";
+    const colorMixBackwards = "colormix-backwards 1s ease-in-out 0s 1 normal";
+
+    if (isShown) {
+        dropdownButton.disabled = true;
+
+        dropdownContent.style.opacity = "0";
+        logo.style.animation = colorMixBackwards;
+        title.style.animation = colorMixBackwards;
+        dropdown.style.animation = colorMixBackwards;
+
         setTimeout(() => {
-            document.getElementById("logo").style.backgroundColor = "#0e0191";
-            document.getElementById("title").style.backgroundColor = "#0e0191";
-            document.getElementById("dropdown").style.backgroundColor = "#0e0191";
+            logo.style.backgroundColor = "#0e0191";
+            title.style.backgroundColor = "#0e0191";
+            dropdown.style.backgroundColor = "#0e0191";
         }, 950);
 
-        const bars = document.getElementsByClassName("bar");
+
         for (let i = 0; i < bars.length; i++) {
             switch (i) {
                 case 0:
@@ -42,30 +49,27 @@ function showNav() {
         }
 
         setTimeout(() => {
-            content.style.display = "none";
+            dropdownContent.style.display = "none";
             document.getElementById("dropdown-button").disabled = false;
         }, 950);
         isShown = false;
     } else {
-        const content = document.getElementById("dropdown-content")
         document.getElementById("dropdown-button").disabled = true;
-
-        document.getElementById("logo").style.animation = "colormix 1s ease-in-out 0s 1 normal";
-        document.getElementById("title").style.animation = "colormix 1s ease-in-out 0s 1 normal";
-        document.getElementById("dropdown").style.animation = "colormix 1s ease-in-out 0s 1 normal";
+        dropdownContent.style.display = "flex";
         setTimeout(() => {
-            document.getElementById("logo").style.backgroundColor = "#000";
-            document.getElementById("title").style.backgroundColor = "#000";
-            document.getElementById("dropdown").style.backgroundColor = "#000";
+            dropdownContent.style.opacity = "1";
+        }, 1); //goofy workaround, for some reason it ain't working without the timeout
+
+        logo.style.animation = colorMix;
+        title.style.animation = colorMix;
+        dropdown.style.animation = colorMix;
+
+        setTimeout(() => {
+            logo.style.backgroundColor = "#000";
+            title.style.backgroundColor = "#000";
+            dropdown.style.backgroundColor = "#000";
         }, 950);
 
-        content.style.display = "flex";
-        content.style.animationDuration = "1.05s";
-        content.style.animationTimingFunction = "linear";
-        content.style.animationDirection = "normal";
-        content.style.animationName = "show";
-
-        const bars = document.getElementsByClassName("bar");
         for (let i = 0; i < bars.length; i++) {
             switch (i) {
                 case 0:
@@ -88,7 +92,6 @@ function showNav() {
                     break;
             }
         }
-
         setTimeout(() => {
             document.getElementById("dropdown-button").disabled = false;
         }, 1000);
