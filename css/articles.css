@@ -26,3 +26,24 @@
     transform: translate(0, -50%);
     transition: transform 0.25s linear;
 }
+
+#scroll-bar {
+    position: absolute;
+    left: 10%;
+    bottom: 15%;
+    width: 80%;
+    height: 0.75vmin;
+    background-color: #ffffff;
+    border-radius: 0.5vmin;
+    border-color: black;
+    border-style: solid;
+    border-width: 0.1vmin;
+}
+
+#scroll-bar > #scroll-progress {
+    width: 0%;
+    height: 100%;
+    background-color: #0e0191;
+    border-radius: 0.25vmin;
+    transition: width 0.25s ease;
+}
