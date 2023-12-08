@@ -1,0 +1,28 @@
+/* Hugely inspired by: https://www.youtube.com/watch?v=PkADl0HubMY */
+
+.article {
+    text-align: center;
+}
+
+.article > .article-title {
+    font-size: 2.5vmin;
+    font-weight: bold;
+}
+
+.article > .article-image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 2vmin;
+}
+
+#article-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: transform 0.25s linear;
+}
