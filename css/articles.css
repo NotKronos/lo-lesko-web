@@ -2,6 +2,7 @@
 
 .article {
     text-align: center;
+    transition: transform 0.25s linear;
 }
 
 .article > .article-title {
@@ -53,10 +54,19 @@
     width: 100%;
     height: 100%;
     text-decoration: none;
+    color: #000;
 }
 
 #article-track > a:hover {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+#article-track > a:visited {
+    color: #000;
+}
+
+.article:hover {
+    transform: scale(1.05);
 }
