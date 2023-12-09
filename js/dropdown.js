@@ -3,6 +3,7 @@ function showNav() {
     const logo = document.getElementById("logo");
     const title = document.getElementById("title");
     const dropdown = document.getElementById("dropdown");
+    const dropdownContainer = document.getElementById("dropdown-container");
     const dropdownContent = document.getElementById("dropdown-content");
     const dropdownButton = document.getElementById("dropdown-button");
     const bars = document.getElementsByClassName("bar");
@@ -22,6 +23,7 @@ function showNav() {
             logo.style.backgroundColor = "#0e0191";
             title.style.backgroundColor = "#0e0191";
             dropdown.style.backgroundColor = "#0e0191";
+            dropdownContainer.style.zIndex = "0";
         }, 950);
 
 
@@ -54,6 +56,7 @@ function showNav() {
         }, 950);
         isShown = false;
     } else {
+        dropdownContainer.style.zIndex = "1";
         document.getElementById("dropdown-button").disabled = true;
         dropdownContent.style.display = "flex";
         setTimeout(() => {
