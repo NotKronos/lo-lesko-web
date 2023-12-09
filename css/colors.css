@@ -1,0 +1,23 @@
+@property --primary-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #2A367D;
+}
+
+@property --background-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #ECDAD7;
+}
+
+@property --text-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #2A367D;
+}
+
+@property --accent-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #ffffff;
+}

@@ -20,9 +20,9 @@ function showNav() {
         dropdown.style.animation = colorMixBackwards;
 
         setTimeout(() => {
-            logo.style.backgroundColor = "#0e0191";
-            title.style.backgroundColor = "#0e0191";
-            dropdown.style.backgroundColor = "#0e0191";
+            logo.style.backgroundColor = "#2A367D";
+            title.style.backgroundColor = "#2A367D";
+            dropdown.style.backgroundColor = "#2A367D";
             dropdownContainer.style.zIndex = "0";
         }, 950);
 

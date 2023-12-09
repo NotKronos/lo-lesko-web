@@ -2,7 +2,6 @@ document.addEventListener('wheel', scroll);
 let prevScroll = 0;
 const maxScroll = -47.5;
 function scroll(e) {
-
     const maxDelta = window.innerWidth * 0.5;
     const delta = e.deltaY;
     const percent = prevScroll + (delta / maxDelta) * -100;
